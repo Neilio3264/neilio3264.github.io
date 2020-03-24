@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+/* Nav */
+.navbar {
+    font-family: 'Baloo Da 2';
+    letter-spacing: .1rem;
+    background: rgba(0,0,0,0.8)!important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav li {
+    padding-right: .7rem;
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover {
+    color: greenyellow;
+}
+
+.nav-link .fa-github:hover,
+.nav-link .fa-linkedin:hover {
+    color: rgb(173, 255, 47);
+}
+
+/* Landing Page */
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .masthead h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.4rem;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(173, 255, 47, 0.7));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  @media (min-width: 768px) {
+    .masthead h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+      padding: 0;
+    }
+    .masthead h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+  }
+
+.masthead .btn-outline-light:hover {
+  background-color: greenyellow;
+}
+
+.about-section {
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+}
+
+.about-section p {
+  margin-bottom: 5rem;
+}

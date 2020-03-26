@@ -14,6 +14,24 @@
         }
       }
     });
+
+    $('.arrow').click(function() {
+      var target = $("#about");
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top - 70)
+          }, 1000, "easeInOutExpo");
+          return false;
+        }
+    });
+
+    $(document).ready(function () {
+      // Hide the div
+      $("#arrows").hide();
+      // Show the div after 5s
+      $("#arrows").delay(3000).fadeIn(500);  
+    });    
   
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {

@@ -27,20 +27,79 @@ body {
   padding-right: .7rem;
 }
 
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  background: transparent;
+}
+
+.navbar-toggler .icon-bar {
+  background-color: #161616;
+  transition: ease all .2s;
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin-top: 4px;
+}
+
+.navbar-toggler .middle-bar {
+  width: 16px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+ 
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler:hover>.middle-bar,
+.navbar-toggler.active>.middle-bar {
+  width: 22px;
+}
+
+.navbar-toggler:hover>.icon-bar,
+.navbar-toggler.active>.icon-bar {
+  background-color: limegreen;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
 @media (max-width: 991px) {
   .navbar {
     background-color: white;
   }
 
   #mainNav .navbar-brand,
-  #mainNav .navbar-toggler .fa-bars,
   #mainNav .navbar-nav .nav-item .nav-link,
   #mainNav .navbar-nav .nav-item .nav-link .fa-github,
   #mainNav .navbar-nav .nav-item .nav-link .fa-linkedin {
     color: #161616;
   }
 
-  #mainNav .navbar-toggler .fa-bars:hover,
   #mainNav .navbar-nav .nav-item .nav-link.active,
   #mainNav .navbar-nav .nav-item .nav-link:hover,
   #mainNav .navbar-nav .nav-item .nav-link .fa-github:hover,

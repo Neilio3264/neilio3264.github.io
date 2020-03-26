@@ -15,7 +15,20 @@
       }
     });
 
+    $('.navbar-brand').click(function() {
+      document.getElementById("arrows").style.display="block";
+      var target = $("#home");
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top - 70)
+          }, 1000, "easeInOutExpo");
+          return false;
+        }
+    });
+
     $('.arrow').click(function() {
+      document.getElementById("arrows").style.display="none";
       var target = $("#about");
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {

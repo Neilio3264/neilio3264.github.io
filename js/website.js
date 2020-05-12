@@ -1,6 +1,33 @@
 (function($) {
     "use strict"; // Start of use strict
-  
+
+    $(document).ready(function(){
+      $(this).scrollTop(0);
+    });
+
+    // disable the landing page animations to wait for the loading screen
+    $("#home #mainNav").addClass('disable');
+    $("#home #landingPageTitle").addClass('disable');
+    $("#home #landingPageButton").addClass('disable');
+    $("#home #arrows").addClass('disable');
+
+    $(window).on('load', function() {
+      $("#arrows").hide();
+      setTimeout(function(){        
+        $('body').addClass('loaded');
+        
+        setTimeout(function(){
+          $("#home nav").removeClass('disable');
+          $("#home #landingPageTitle").removeClass('disable');
+          $("#home #landingPageButton").removeClass('disable');
+          $("#home #arrows").removeClass('disable');
+
+          // Show the div after 5s
+          $("#arrows").delay(3000).fadeIn(500); 
+        }, 1000);
+      }, 2000);
+    });
+
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -28,7 +55,7 @@
     });
 
     $('.arrow').click(function() {
-      document.getElementById("arrows").style.display="none";
+      $("#arrows").fadeOut();
       var target = $("#about");
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
@@ -38,13 +65,15 @@
           return false;
         }
     });
-
-    $(document).ready(function () {
-      // Hide the div
-      $("#arrows").hide();
-      // Show the div after 5s
-      $("#arrows").delay(3000).fadeIn(500);  
-    });    
+    
+    $(window).scroll(function() {
+      var target = $("#about");
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $("#arrows").fadeOut();
+          return false;
+        }
+    }); 
   
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {

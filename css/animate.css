@@ -51,3 +51,19 @@
         opacity: 1;
     }
 }
+
+@keyframes grow{
+    0%, 100%{
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      -o-transform: scaleY(1);
+      transform: scaleY(1);
+    }
+  
+    50%{
+      -webkit-transform: scaleY(2.2);
+      -ms-transform: scaleY(2.2);
+      -o-transform: scaleY(2.2);
+      transform: scaleY(2.2);
+    }
+  }

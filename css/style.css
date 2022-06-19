@@ -134,6 +134,17 @@ body {
   animation-duration: 1s;
 }
 
+.bgcolor.scrolled {
+  background-color: white;
+}
+
+.navbar-brand.scrolled,
+.navbar-nav .nav-item .nav-link.scrolled,
+.navbar-nav .nav-item .nav-link .fa-github.scrolled,
+.navbar-nav .nav-item .nav-link .fa-linkedin.scrolled {
+    color: #161616;
+  }
+
 .navbar-brand {
   font-size: 1.5rem;
 }
@@ -239,21 +250,21 @@ body {
     color: greenyellow;
   }
 
-  #mainNav.navbar-shrink {
+  #mainNav.bgcolor.scrolled {
     background-color: #fff;
   }
 
-  #mainNav.navbar-shrink .navbar-brand,
-  #mainNav.navbar-shrink .nav-link,
-  #mainNav.navbar-shrink .nav-link .fa-github,
-  #mainNav.navbar-shrink .nav-link .fa-linkedin {
+  #mainNav.bgcolor.scrolled .navbar-brand,
+  #mainNav.bgcolor.scrolled .nav-link,
+  #mainNav.bgcolor.scrolled .nav-link .fa-github,
+  #mainNav.bgcolor.scrolled .nav-link .fa-linkedin {
     color: #161616;
   }
 
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active,
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover,
-  #mainNav.navbar-shrink .nav-link .fa-github:hover,
-  #mainNav.navbar-shrink .nav-link .fa-linkedin:hover {
+  #mainNav.bgcolor.scrolled .navbar-nav .nav-item .nav-link.active,
+  #mainNav.bgcolor.scrolled .navbar-nav .nav-item .nav-link:hover,
+  #mainNav.bgcolor.scrolled .nav-link .fa-github:hover,
+  #mainNav.bgcolor.scrolled .nav-link .fa-linkedin:hover {
     color: limegreen;
   }
 }
